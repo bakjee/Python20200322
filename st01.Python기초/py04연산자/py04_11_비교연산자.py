@@ -1,0 +1,9 @@
+print("hello"=="hello")
+3==2
+"hello"=="hello"
+print(True)
+flag=True
+print(flag)
+flag=(2>3)
+y=2>3
+print(y)
