@@ -8,8 +8,7 @@ Thousand=int(input("천 원권의 개수....?:"))
 Fivehund=int(input("오백 원 동전의 개수....?:"))
 Hund=int((input("백 원 동전의 개수....?:"))
 
-price-(1000*Thousand)-(Fivehund*500)-(Hund*100)
-
+change1=price%[(1000*Thousand)+(Fivehund*500)+(Hund*100)]
 
 # 거스름돈(500원 동전 개수)을 계산한다. 
 

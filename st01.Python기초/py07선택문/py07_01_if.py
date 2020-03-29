@@ -1,6 +1,11 @@
+grade=int(input("제 점수는요....:"))
+if grade >60:
+    print("합격입니다.")
+else: #아니면 == 60이하이면
+    pass
 
-
-# "grade 가 60보다 크다면 합격입니다"
+print("종료")
+# "grade 가 060보다 크다면 합격입니다"
 
 
 
