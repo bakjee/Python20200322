@@ -1,12 +1,22 @@
-no1 = int(input("1번째 숫자를 입력 하시오...:"))
-no2 = int(input("2번째 숫자를 입력 하시오...:"))
-no3 = int(input("3번째 숫자를 입력 하시오...:"))
+a = int(input("1번째 숫자를 입력 하시오...:"))
+b = int(input("2번째 숫자를 입력 하시오...:"))
+c = int(input("3번째 숫자를 입력 하시오...:"))
 
-if no1 > no2 and no1 > no3:
-    print(no1)
+if a > b and a > b:
+    print(a)
 
-elif no2 > no1 and no2 > no3:
-    print(no2)
+elif b > a and b > c:
+    print(b)
 
 else:
-    print(no3)
+    print(c)
+
+
+
+#FINDING MAX NUM USING MAX FUNC.
+#MAX FUNC -> 리스트, 튜플, 세트에서 사용가능하다
+ list1= [x,y,z]
+ max(list1)
+
+ print("입력한 수 중 가장 큰수는",max(list1), "입니다")
+ 
