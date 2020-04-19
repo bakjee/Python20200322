@@ -12,4 +12,4 @@ def outer():
 
 
 outer()
-print(y)
+print(x)

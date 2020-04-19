@@ -1,4 +1,3 @@
-
 #################################
 # 중요 문자열 함수 / 문자열 메서드
 #################################
@@ -19,20 +18,49 @@
 # .join()	문자열 삽입(join)
 
 # 문자열 개수 세기(count)
-
+a = "hobby"
+len(a)  # 5
+print(len(a))
+length = a.count("b")
+print(length)
 # 위치 알려주기1(find)
+a = "Phython is best choice"
+pos = a.find("b")  # 10
+print(pos)
+pos = a.find("k")  # -1
+print(pos)
 
 # 위치 알려주기2(index)
 # index 를 사용할 때는 try except 로 감싸야 한다
+try:
+    a="Python is best choice"
+    pos=a.index("b") #10
+    pos=a.index("k") # ==> Value Error
+    print(pos)
+except Exception as ex:
+    print(ex)
 
 # 문자열 삽입(join)
-
+a=","
+print(a.join("abcd"))
 # 소문자를 대문자로 바꾸기(upper)
 
 # 대문자를 소문자로 바꾸기(lower)
 
 # 양쪽 공백 지우기(strip)
+a="     hi     "
+a=a.strip()
+print(a)
 
 # 문자열 바꾸기(replace)
+a="Life is too short"
+print(a)
+a=a.replace("Life","인생").replace("too", "너무")
+print(a)
+
 
 # 문자열 나누기(split). 지정한 문자로 문자열을 나눈다.(리스트로 반환)
+a="a:b:c:d"
+list1=a.split(":")
+
+print(list1)

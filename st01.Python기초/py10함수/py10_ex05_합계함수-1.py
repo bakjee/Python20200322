@@ -1,22 +1,24 @@
 # 데이터 수집
 # readList 반환값은 리스트라고 가정한다
+
+
 def newmethod387():
     result = None
-    첫번째정수 = int(input("정수를 입력하세요 : "))
-    return result
+    반환값 = int(input("정수를 입력하세요 : "))
+    return 반환값
+
 
 def readList():
     result = None
-    result=[]
+    result = []
 
     반환값 = newmethod387()
-    result.append(반환값) #result[0]=1
-    
+    result.append(반환값)  # result[0]=1
+
     반환값 = newmethod387()
-    result.append(반환값) #result[1]=4
-  
+    result.append(반환값)  # result[1]=4
+
     return result
-
 
 
 
@@ -52,20 +54,24 @@ def readList():
 def processList(nlist):
     result = None
     result = sorted(nlist)
-    return result #0번방값: 1, 1번방 값:4
+    return result  # 0번방값: 1, 1번방 값:4
 
-#데이터 합계:
-#매개변수:리스트다
+# 데이터 합계:
+# 매개변수:리스트다
+
+
 def sumList(nlist):
-    result=0
+    result = 0
     for i in nlist:
-         result=result+i #i의 의미는 : i번째 방의 값이다.
-    return result #합계값
+        result = result+i  # i의 의미는 : i번째 방의 값이다.
+    return result  # 합계값
 
-#데이;터 출력
+# 데이;터 출력
+
+
 def printList(nlist):
     result = None
-    result="%s 부터 %s 까지의 합계는 %s 입니다" %(nlist[0],nlist[1],nlist[2])
+    result = "%s 부터 %s 까지의 합계는 %s 입니다" % (nlist[0], nlist[1], nlist[2])
     print(result)
     return result
 
@@ -81,10 +87,10 @@ def main():
     # 3. 데이터 출력==> printList() 함수 사용
 
     result = readList()
-    result = processList(result)#[시작값,종료값]
+    result = processList(result)  # [시작값,종료값]
+    # 합계값을 리스트, result에 추가 하시오
     합계값=sumList(result)
-    #합계값을 리스트, result에 추가 하시오
-    result.appened(합계값)  #[시작값, 종료값, 합계값]
+    result.append(합계값)  # [시작값, 종료값, 합계값]
     result = printList(result)
 
     return result

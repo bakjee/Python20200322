@@ -14,32 +14,43 @@
 value = ""
 
 #  List 선언
+list1=[]
 
 
 #  C: 추가. 검색: "파이썬 리스트 추가"
 #  append() 또는 insert()
 #  MILK, BREAD, BUTTER 순으로 추가
+list1.append("MILK")
+list1.append("BREAD")
+list1.append("BUTTER")
 
-#  APPLE 삽입. 검색: "파이썬 리스트 삽입"
-#  특정 위치에 추가하기
+print(list1)
 #  "BREAD" 앞에 "APPLE" 삽입
-#  "BUTTER" 가 들어있는 방번호 찾기
+location=list1.index("BREAD")
+list1.insert(location,"APPLE")
+print(list1)
+
 
 
 #  R: 읽기
 #  BUTTER 값을 출력하시오.
 #  "BUTTER" 가 들어있는 방번호 찾기
-
+location=list1.index("BUTTER")
+print(list1[location])
 
 #  U: 수정. 검색: "파이썬 리스트 수정"
 #  "BREAD" 를 "GRAPE"로 변경
 #  "BREAD" 가 들어있는 방번호 찾기
-
-
-
+location=list1.index("BREAD")
+list1[location]="GRAPE"
 #  D: 인덱스로 삭제. 검색: "파이썬 리스트 삭제"
 #  인덱스를 이용하여 GRAPE 를 삭제
 #  "GRAPE" 가 들어있는 방번호 찾기
+location=list1.index("GRAPE")
+a=list1[location].delete
+print(a)
+
+
 
 
 #  D: 값으로 찾아서 삭제. 검색: "파이썬 리스트 값으로 삭제"
@@ -53,10 +64,10 @@ value = ""
 
 
 #  테스트용 데이터 생성을 위한 코드. 수정하지 마시오.
-print( 리스트 ) # ['APPLE', 'BUTTER']
-for i in range(4):
-    리스트.append("APPLE")
-    리스트.append("BANNA")
+#print( 리스트 ) # ['APPLE', 'BUTTER']
+#for i in range(4):
+#    리스트.append("APPLE")
+#    리스트.append("BANNA")
 
 # 도전.
 #  첫번째 APPLE이 있는 방번호를 출력하시오.
