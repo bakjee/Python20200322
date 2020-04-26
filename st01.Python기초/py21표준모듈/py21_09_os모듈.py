@@ -2,6 +2,8 @@
 # os 모듈의 사용법을 익힌다.
 #
 # os.path.isfile() 메서드는 있으면 True 없으면 False 를 반환한다.
+# os.path.dirname() 메서드는 현재 실행되는 스크립트의 절대 경로 반환.
+# os.path.normpath() 메서드는 파일명 만들기
 #################################
 
 
@@ -21,12 +23,39 @@
 # 
 # 현재 폴더에 phones.txt 파일이 존재하는지 확인한다.
 # os.path.isfile() 메서드는 있으면 True 없으면 False 를 반환한다.
+#현재 작업 디렉토리 구하기
+import os
+
+dir=os.getcwd()
+print("현재 작업 디렉토리", dir)
+
+#현재 실행되는 스크립트 파일의 절대경로 구하기
+absfile=os.path.abspath(__file__)
+print(absfile)
+
+curDir=os.path.dirname(os.path.abspath(__file__))
+print(curDir)
+
 
 
 #######################
 # 현재 폴더의 파일/폴더를 출력합니다.
+#phones.txt. 의 파일 절대 경로 만들기 = #폴더명 + "\" + 파일명
+fileName="phones.txt"
+#폴더명==>curDir
+#"\"+파일명==>os.path.join("\",phones.txt)   #==> "\phones.txt"
+txtA=os.path.join("/","phones.txt")
+txtFile=os.path.normpath(curDir+txtA) #==>절대 경로
+print(txtFile)
 
+###########################
+#현재 폴더에 phones.txt 파일이 존재하는지 확인한다.
+#os.path.isfile(파일의절대경로) 메서드는 있으면 True 없으면 False를 반환
 
+if (os.path.isfile(txtFile)):
+    print("파일존재")
+else: #파일이 없으면
+    print("파일없음")
 #######################
 # 현재 폴더의 파일/폴더를 구분합니다.
 
